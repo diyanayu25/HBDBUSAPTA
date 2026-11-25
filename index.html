@@ -1,0 +1,928 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Ibu Sapta Pasa Sativa Novyanti</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #eaf6ff,
+        #ffffff,
+        #cce8ff
+    );
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #174b83;
+}
+
+/* BACKGROUND BALON */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 65px;
+    height: 85px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: floatUp linear infinite;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 75px;
+    background: #9bbbd8;
+    top: 83px;
+    left: 50%;
+}
+
+.balloon:nth-child(1) {
+    left: 8%;
+    background: #5ba9e8;
+    animation-duration: 12s;
+}
+
+.balloon:nth-child(2) {
+    left: 25%;
+    background: white;
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+
+.balloon:nth-child(3) {
+    left: 70%;
+    background: #8ac7f5;
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(4) {
+    left: 88%;
+    background: #3d83c8;
+    animation-duration: 18s;
+    animation-delay: 4s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(8deg);
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(-8deg);
+    }
+}
+
+/* KARTU UCAPAN */
+
+.container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.card {
+    width: 100%;
+    max-width: 750px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 2px solid #d5ebff;
+    border-radius: 30px;
+    padding: 45px 35px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(45, 119, 184, 0.18);
+    animation: cardAppear 1.2s ease;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.badge {
+    display: inline-block;
+    background: #e4f3ff;
+    color: #347fbd;
+    padding: 9px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.birthday-icon {
+    font-size: 65px;
+    animation: bounce 2s infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+h1 {
+    font-size: clamp(30px, 6vw, 48px);
+    color: #246db0;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: #6594bb;
+    margin-bottom: 25px;
+}
+
+.divider {
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(
+        to right,
+        #9bd6ff,
+        #287fc3
+    );
+    margin: 25px auto;
+    border-radius: 10px;
+}
+
+.message {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #42698c;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #247fc2;
+    font-weight: bold;
+}
+
+.thanks {
+    background: #edf7ff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 25px 0;
+    border-left: 5px solid #68b5ef;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #42698c;
+}
+
+.signature {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #347fbd;
+    font-weight: bold;
+}
+
+.signature span {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 8px;
+    color: #83a8c9;
+}
+
+/* TOMBOL MUSIK */
+
+.music-button {
+    border: none;
+    background: linear-gradient(
+        135deg,
+        #5eb4f0,
+        #287fc3
+    );
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(40, 127, 195, 0.25);
+    transition: 0.3s;
+}
+
+.music-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(40, 127, 195, 0.35);
+}
+
+/* GALERI KENANGAN */
+
+.memory-section {
+    margin-top: 55px;
+    padding-top: 35px;
+    border-top: 2px dashed #cce8ff;
+}
+
+.memory-heading {
+    margin-bottom: 30px;
+}
+
+.memory-label {
+    display: inline-block;
+    color: #5ba9e8;
+    background: #e4f3ff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.memory-heading h2 {
+    color: #246db0;
+    font-size: clamp(25px, 5vw, 36px);
+    margin-bottom: 15px;
+}
+
+.memory-heading p {
+    color: #6594bb;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* GRID FOTO */
+
+.memory-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* KARTU FOTO */
+
+.memory-card {
+    background: white;
+    padding: 12px;
+    border-radius: 22px;
+    border: 2px solid #d5ebff;
+    box-shadow: 0 10px 30px rgba(45, 119, 184, 0.15);
+    overflow: hidden;
+    transition: 0.4s ease;
+    animation: photoAppear 1s ease backwards;
+}
+
+.memory-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.memory-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.memory-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.memory-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes photoAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* FOTO */
+
+.memory-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(45, 119, 184, 0.25);
+    border-color: #8ac7f5;
+}
+
+.memory-card:hover img {
+    transform: scale(1.05);
+}
+
+/* CAPTION FOTO */
+
+.memory-caption {
+    padding: 18px 10px 12px;
+}
+
+.memory-caption h3 {
+    color: #287fc3;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.memory-caption p {
+    color: #7c9fbd;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* KATA PENUTUP */
+
+.memory-ending {
+    margin-top: 35px;
+    padding: 25px;
+    background: #edf7ff;
+    border: 1px solid #d5ebff;
+    border-radius: 20px;
+    color: #5688b5;
+    line-height: 1.8;
+}
+
+.memory-ending p {
+    font-style: italic;
+    font-size: 16px;
+}
+
+.memory-ending span {
+    display: block;
+    margin-top: 12px;
+    color: #287fc3;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #9bbbd8;
+    letter-spacing: 1px;
+}
+
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    width: 10px;
+    height: 15px;
+    z-index: 10;
+    pointer-events: none;
+    animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+    .card {
+        padding: 35px 20px;
+        border-radius: 24px;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+
+    .thanks {
+        font-size: 14px;
+    }
+
+    .birthday-icon {
+        font-size: 55px;
+    }
+
+    .memory-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .memory-card img {
+        height: 240px;
+    }
+
+    .memory-section {
+        margin-top: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND BALON -->
+
+<div class="background">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+</div>
+
+<!-- KONTEN UTAMA -->
+
+<main class="container">
+
+<div class="card">
+
+    <div class="badge">SPECIAL DAY</div>
+
+    <div class="birthday-icon">🎂</div>
+
+    <h1>Happy Birthday Bu Sapta!</h1>
+
+    <p class="subtitle">
+        Hadiah Kecil dari Kita untuk Manusia yang Membimbing dengan Tulus
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="message">
+        Selamat ulang tahun,
+        <span class="highlight">Ibu Sapta Pasa Sativa Novyanti</span>
+        selaku Pembina IPM kesayangan kita.. yang selalu memberikan arahan,
+        semangat, dan inspirasi bagi kami.
+
+        <br><br>
+
+        Semoga setiap langkah selalu
+        diberkahi, setiap harapan dimudahkan,
+        dan setiap kebaikan menjadi
+        kebahagiaan yang berlipat.
+    </p>
+
+    <div class="thanks">
+
+        <strong>Terima Kasih, Bu Sapta.. We Love u always!</strong>
+
+        <br><br>
+
+        Terima kasih atas kesabaran,
+        bimbingan, ilmu, dan dukungan
+        yang telah diberikan kepada kami.
+
+        <br>
+
+        Terima kasih telah menjadi sosok
+        yang mengajarkan kami untuk
+        tumbuh, belajar, dan memimpin
+        dengan penuh makna.
+
+        <br><br>
+
+        Semoga Allah SWT senantiasa
+        memberikan kesehatan, umur
+        yang berkah, serta kebahagiaan
+        dunia dan akhirat.
+
+    </div>
+
+    <p class="message">
+        <span class="highlight">
+            Barakallahu fii umrik!
+        </span>
+
+        <br>
+
+        Semoga selalu dalam lindungan Allah SWT.
+    </p>
+
+    <button class="music-button" id="musicBtn">
+        🎵 Putar Happy Birthday
+    </button>
+
+    <div class="signature">
+        Dengan penuh rasa hormat dan terima kasih,
+
+        <span>Alumni PR IPM Ke-24</span>
+    </div>
+
+    <!-- GALERI FOTO KENANGAN -->
+
+    <section class="memory-section">
+
+        <div class="memory-heading">
+
+            <span class="memory-label">
+                OUR BEAUTIFUL MEMORIES
+            </span>
+
+            <h2>Our Memories</h2>
+
+            <p>
+                Setiap momen bersama adalah cerita
+                yang akan selalu kami kenang.
+            </p>
+
+        </div>
+
+        <div class="memory-gallery">
+
+            <!-- FOTO 1 -->
+
+            <div class="memory-card">
+
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvU8h7MUFGJpZGA3OYXc16W-5CxtijpxgMtp2CmDrh-_uLk3dmNToN35w1zioUzw9lNmIgUmanuncyCAh_lO6aa-gnSHXtnnQikrjBPiSH_AJlgpDDCYiMlqFOPXqFansokmXHDXjSz3Hmx4u3105J3etsXUeyn5HOd5LsxL8oJv-rhnmz8W0hpeI7lsuS/s320/WhatsApp%20Image%202026-11-25%20at%206.57.54%20PM.jpeg"
+                     >
+
+                <div class="memory-caption">
+
+                    <h3>Thank You for Always being Kind</h3>
+
+                    <p>
+                        Terima kasih telah hadir
+                        dalam setiap perjalanan kami.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FOTO 2 -->
+
+            <div class="memory-card">
+
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-3Y9cUTakIHPwoBDOdqdRgE8XXA49mNHdSD_fC_tlO2yesgW3ParjpBktfQO0SXAq7g-DyIXlet9E6njDfNmHx0xW7mxJFXgdCQi4PCaNFpqNVAvjr_ZCJf9A01Gx_wDl7_2l8iO8-f5afqLTuCK4JoCJ8XZBmIoTTIBdBFMGthZLLisq6-hw3aiGnWDs/s320/IMG-20260309-WA0052.jpg"
+                     >
+
+                <div class="memory-caption">
+
+                    <h3>Thank You for Always make us Feel Safe</h3>
+
+                    <p>
+                        Bersama belajar, bertumbuh,
+                        dan menjadi lebih baik.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FOTO 3 -->
+
+            <div class="memory-card">
+
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDVr_BE9pKwPrdcPKivAnkwhHQ2IH6ZQGTBL9LVX4xGCnx3dRmyzcsfq5Lcw5ftalruEfS2ZLZ_tEd8D3hu6629HhHsMBrs9a50HPin1KANCAywI-aLqkVwRV8-hk_fxqreQt_cIVyK_9Cq4rlgulb2-eFlnQvPKnSKLhSkFsDPbYhnxS_ZxiWBcOySUu9/s320/IMG-20260226-WA0046.jpg"
+                     >
+
+                <div class="memory-caption">
+
+                    <h3>Perjalanan dalam Berorganisasi</h3>
+
+                    <p>
+                        Kenangan sederhana yang
+                        memiliki arti luar biasa.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FOTO 4 -->
+
+            <div class="memory-card">
+
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtaB_461tPDd8_9yUyWGaHcAw54Y-GgjZqzfcTyiyRJ87lwopxBuHiEGhqjpVKStazFxX6FQ8txqyb3PooIgjYSpm7ayM8qyL_B-z7iJxpr2EDk0aOczj1-9aKZmAcW-gQIg4_xR2JD7zwzKHYwG23LjHgrrfIbGOaVqhxbKPY2NYoJ_k0TjCNjoKjndt8/s320/21cfe912b56948748d1c935a92e29bd8.jpg"
+                    >
+
+                <div class="memory-caption">
+
+                    <h3>Menjadikan Organisasi terasa Seperti Rumah</h3>
+
+                    <p>
+                        Terima kasih telah menjadi
+                        bagian dari cerita kami.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="memory-ending">
+
+            <p>
+                "Waktu mungkin akan berlalu,
+                tetapi kenangan dan kebaikan
+                akan selalu tinggal di hati."
+            </p>
+
+            <span>
+                — Alumni PR IPM Ke-24 —
+            </span>
+
+        </div>
+
+    </section>
+
+    <div class="footer">
+        WE WILL ALWAYS LOVE U, BU SAPTA
+    </div>
+
+</div>
+
+</main>
+
+<script>
+    // Frekuensi nada dalam Hz (tangga nada C Mayor)
+    const NOTE = {
+      C3: 130.81, D3: 146.83, E3: 164.81, F3: 174.61, G3: 196.00, A3: 220.00, B3: 246.94,
+      C4: 261.63, D4: 293.66, E4: 329.63, F4: 349.23, G4: 392.00, A4: 440.00, Bb4: 466.16, B4: 493.88,
+      C5: 523.25, D5: 587.33, E5: 659.25, F5: 698.46, G5: 783.99
+    };
+
+    // Melodi Happy Birthday (nada, durasi dalam beat)
+    const MELODY = [
+      [NOTE.G4, 0.75], [NOTE.G4, 0.25], [NOTE.A4, 1.0], [NOTE.G4, 1.0], [NOTE.C5, 1.0], [NOTE.B4, 2.0],
+      [NOTE.G4, 0.75], [NOTE.G4, 0.25], [NOTE.A4, 1.0], [NOTE.G4, 1.0], [NOTE.D5, 1.0], [NOTE.C5, 2.0],
+      [NOTE.G4, 0.75], [NOTE.G4, 0.25], [NOTE.G5, 1.0], [NOTE.E5, 1.0], [NOTE.C5, 1.0], [NOTE.B4, 1.0], [NOTE.A4, 2.0],
+      [NOTE.F5, 0.75], [NOTE.F5, 0.25], [NOTE.E5, 1.0], [NOTE.C5, 1.0], [NOTE.D5, 1.0], [NOTE.C5, 2.5]
+    ];
+
+    // Pola bass ceria (diulang tiap 2 beat)
+    const BASS_PATTERN = [NOTE.C3, NOTE.G3, NOTE.A3, NOTE.E3, NOTE.F3, NOTE.C3, NOTE.G3, NOTE.D3];
+
+    let audioCtx = null;
+    let isPlaying = false;
+    let loopTimer = null;
+    let confettiTimer = null;
+
+    const playBtn = document.getElementById('playBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const bpmRange = document.getElementById('bpmRange');
+    const bpmValue = document.getElementById('bpmValue');
+    const cake = document.getElementById('cake');
+
+    bpmRange.addEventListener('input', () => {
+      bpmValue.textContent = bpmRange.value;
+    });
+
+    function ensureAudioContext() {
+      if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContextClass();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    // Synthesizer lead melody
+    function playLead(freq, startTime, durationSec) {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, startTime);
+
+      gain.gain.setValueAtTime(0.001, startTime);
+      gain.gain.exponentialRampToValueAtTime(0.22, startTime + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, startTime + durationSec * 0.95);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.start(startTime);
+      osc.stop(startTime + durationSec);
+    }
+
+    // Bass groove
+    function playBass(freq, startTime, durationSec) {
+      const osc = audioCtx.createOscillator();
+      const filter = audioCtx.createBiquadFilter();
+      const gain = audioCtx.createGain();
+
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(freq, startTime);
+
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(650, startTime);
+
+      gain.gain.setValueAtTime(0.001, startTime);
+      gain.gain.exponentialRampToValueAtTime(0.14, startTime + 0.015);
+      gain.gain.exponentialRampToValueAtTime(0.001, startTime + durationSec * 0.9);
+
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.start(startTime);
+      osc.stop(startTime + durationSec);
+    }
+
+    // Kick drum sederhana
+    function playKick(startTime) {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(140, startTime);
+      osc.frequency.exponentialRampToValueAtTime(42, startTime + 0.12);
+
+      gain.gain.setValueAtTime(0.32, startTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.14);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.start(startTime);
+      osc.stop(startTime + 0.15);
+    }
+
+    // Hi-hat / clap ringan menggunakan noise buffer
+    function playHiHat(startTime) {
+      const bufferSize = audioCtx.sampleRate * 0.04;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = Math.random() * 2 - 1;
+      }
+
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'highpass';
+      filter.frequency.setValueAtTime(7000, startTime);
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.06, startTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.04);
+
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      noise.start(startTime);
+    }
+
+    function spawnConfetti() {
+      const colors = ['#ffd23f', '#ff4d8d', '#00f5d4', '#9b5de5', '#ff9f1c'];
+      for (let i = 0; i < 8; i++) {
+        const piece = document.createElement('div');
+        piece.className = 'confetti';
+        piece.style.left = Math.random() * 100 + 'vw';
+        piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.animationDuration = (2.2 + Math.random() * 1.8) + 's';
+        document.body.appendChild(piece);
+        setTimeout(() => piece.remove(), 4200);
+      }
+    }
+
+    function scheduleSong() {
+      if (!isPlaying) return;
+
+      const bpm = Number(bpmRange.value);
+      const beatSec = 60 / bpm;
+      const startAt = audioCtx.currentTime + 0.05;
+
+      // Jadwalkan melodi
+      let currentBeat = 0;
+      for (const [freq, durBeats] of MELODY) {
+        playLead(freq, startAt + currentBeat * beatSec, durBeats * beatSec);
+        currentBeat += durBeats;
+      }
+
+      const totalBeats = currentBeat; // 24 beat
+
+      // Jadwalkan bass, kick, dan hi-hat tiap 0.5 beat
+      const halfBeats = Math.floor(totalBeats * 2);
+      for (let step = 0; step < halfBeats; step++) {
+        const stepTime = startAt + step * (beatSec / 2);
+        const bassNote = BASS_PATTERN[step % BASS_PATTERN.length];
+        playBass(bassNote, stepTime, beatSec / 2);
+
+        if (step % 2 === 0) {
+          playKick(stepTime); // kick tiap 1 beat
+        } else {
+          playHiHat(stepTime); // off-beat hi-hat biar groovy
+        }
+      }
+
+      const totalDurationMs = totalBeats * beatSec * 1000;
+      loopTimer = setTimeout(scheduleSong, totalDurationMs);
+    }
+
+    playBtn.addEventListener('click', () => {
+      ensureAudioContext();
+      if (isPlaying) return;
+      isPlaying = true;
+      cake.classList.add('bounce');
+      scheduleSong();
+      spawnConfetti();
+      confettiTimer = setInterval(spawnConfetti, 900);
+    });
+
+    stopBtn.addEventListener('click', () => {
+      isPlaying = false;
+      cake.classList.remove('bounce');
+      clearTimeout(loopTimer);
+      clearInterval(confettiTimer);
+    });
+
+/* CONFETTI */
+
+function createConfetti() {
+
+    const colors = [
+        "#5ba9e8",
+        "#ffffff",
+        "#a4d9ff",
+        "#287fc3",
+        "#d3ecff"
+    ];
+
+    for (let i = 0; i < 80; i++) {
+
+        const confetti =
+            document.createElement("div");
+
+        confetti.classList.add("confetti");
+
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+        confetti.style.background =
+            colors[
+                Math.floor(
+                    Math.random() * colors.length
+                )
+            ];
+
+        confetti.style.animationDuration =
+            (Math.random() * 2 + 2) + "s";
+
+        confetti.style.animationDelay =
+            Math.random() * 0.5 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.remove();
+        }, 5000);
+    }
+}
+
+window.addEventListener("load", () => {
+    setTimeout(createConfetti, 700);
+});
+
+</script>
+
+</body>
+</html>
